@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Everia Tech</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(to bottom,#000000,#0a0a0a);
+color:white;
+}
+
+/* GOLD GLOW LOGO */
+header{
+text-align:center;
+padding:30px;
+border-bottom:1px solid gold;
+}
+
+.logo{
+font-size:36px;
+color:gold;
+font-weight:bold;
+letter-spacing:3px;
+text-shadow:0 0 10px gold;
+animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 5px gold;}
+to{text-shadow:0 0 20px gold;}
+}
+
+.tagline{
+color:#ccc;
+}
+
+/* HERO */
+.hero{
+text-align:center;
+padding:60px 20px;
+animation: fadeIn 2s;
+}
+
+.hero h1{
+color:gold;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+/* SERVICES */
+.services{
+padding:30px;
+}
+
+.services h2{
+text-align:center;
+color:gold;
+}
+
+.grid{
+display:grid;
+gap:20px;
+}
+
+.card{
+background:#111;
+padding:20px;
+border-radius:10px;
+border:1px solid gold;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 15px gold;
+}
+
+.card img{
+width:100%;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+/* CONTACT */
+.contact{
+text-align:center;
+padding:40px;
+}
+
+.contact h2{
+color:gold;
+}
+
+.btn{
+display:inline-block;
+margin:10px;
+padding:12px 20px;
+background:gold;
+color:black;
+font-weight:bold;
+text-decoration:none;
+border-radius:6px;
+}
+
+.btn:hover{
+background:white;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+border-top:1px solid gold;
+color:#777;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">EVERIA TECH</div>
+<div class="tagline">Elite Cybersecurity & Digital Solutions</div>
+</header>
+
+<section class="hero">
+<h1>Protect Your Digital World</h1>
+<p>Luxury-grade cybersecurity, website creation, and digital protection services.</p>
+</section>
+
+<section class="services">
+<h2>Our Services</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="cyber.jpg">
+<h3>Cybersecurity</h3>
+<p>Device protection, malware removal, and privacy security.</p>
+</div>
+
+<div class="card">
+<img src="website.jpg">
+<h3>Website Development</h3>
+<p>Modern, fast, and secure websites for your brand.</p>
+</div>
+
+<div class="card">
+<img src="logo.jpg">
+<h3>Logo & Brand Design</h3>
+<p>Luxury brand identity creation.</p>
+</div>
+
+<div class="card">
+<img src="repair.jpg">
+<h3>System Optimization</h3>
+<p>Speed up and secure your devices.</p>
+</div>
+
+</div>
+</section>
+
+<section class="contact">
+<h2>Contact Us</h2>
+
+<p>Email: everiatech@email.com</p>
+
+<a class="btn" href="mailto:everiatech@email.com">
+Email Us
+</a>
+
+<a class="btn" href="https://wa.me/2547XXXXXXXX">
+WhatsApp Us
+</a>
+
+</section>
+
+<footer>
+© 2026 Everia Tech | Nairobi, Kenya
+</footer>
+
+</body>
+</html>
