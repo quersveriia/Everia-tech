@@ -6,21 +6,41 @@
 <title>Everia Tech</title>
 
 <style>
-
-body{
+.typing{
+  overflow:hidden;
+  white-space:nowrap;
+  boder-right:2px solid gold;
+  width:0;
+  animation:typing 3s steps(30,end) forwards;
+}
+  @keyframes typing{
+    from{width:0}
+    to{width:100%}
+  }
+  
+.body{
 margin:0;
 font-family:Arial, sans-serif;
 background:linear-gradient(to bottom,#000000,#0a0a0a);
 color:white;
 }
-
+  
+ #matrix{
+    position:fixed:
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    }
+   
 /* GOLD GLOW LOGO */
 header{
 text-align:center;
 padding:30px;
 border-bottom:1px solid gold;
 }
-
+ 
 .logo{
 font-size:36px;
 color:gold;
@@ -75,20 +95,25 @@ background:#111;
 padding:20px;
 border-radius:10px;
 border:1px solid gold;
-transition:0.3s;
+transition:0.3s ease;
 }
 
 .card:hover{
-transform:scale(1.05);
-box-shadow:0 0 15px gold;
+transform:translateY(-10px);
+box-shadow:0 0 20px gold;
 }
 
 .card img{
 width:100%;
 border-radius:8px;
-margin-bottom:10px;
+transition:0.3s;
 }
 
+
+  .card:hover img{
+    transform:scale(1.05):
+  }
+  
 /* CONTACT */
 .contact{
 text-align:center;
@@ -133,12 +158,12 @@ color:#777;
 </header>
 
 <section class="hero">
-<h1>Protect Your Digital World</h1>
+<h1=class="typing">Protect Your Digital World</h1>
 <p>Luxury-grade cybersecurity, website creation, and digital protection services.</p>
 </section>
 
 <section class="services">
-<h2>Our Services</h2>
+<h2>class="glow">Our Services</h2>
 
 <div class="grid">
 
@@ -147,7 +172,7 @@ color:#777;
 <h3><div class="grid">
 
 <div class="card">
-<img src="cybersecurity.jpg">
+<img src="cyber-security.jpg">
 <h3>Cybersecurity Protection</h3>
 <p>Malware removal, phone & laptop protection.</p>
 <p style="color:gold;font-weight:bold;">KES 1,500 – 5,000</p>
@@ -197,5 +222,44 @@ Email Us
 © 2026 Everia Tech | Nairobi, Kenya
 </footer>
 
+  <canvas id="matrix"></canvas>
+
+  <script>
+    const canvas=document.getElementByid("matrix");
+    const ctx =canvas.getContext("2d");
+
+    canvas.height =window.innerHeight;
+    canvas.width =window.innerWidth;
+
+    const letters ='01 ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      const matrix=letters.split ("");
+    const fontsize =14;
+    const columns =canvas.width / fontsize;
+
+    const drops=[];
+
+    for (let x= 0;x<columns;x++)
+      drops[x] =1;
+    function draw(){
+      ctx.fillstyle=rgba(0,0,0,0.05)";
+        ctx.font=fontsize+ px monospace";
+
+          for(let i=0;i<drops.length;i++){
+
+            const text=
+              matrix[Math.floor(Math.random()*matrix.lenth)];
+
+            ctx.fillText(text,i*fontsize,drops[i]*fontsize);
+
+            if(drops[i]*fontsize>canvas.height && Math.random()>
+               0.975)
+              drops[i] =0;
+
+              drops[i]++;
+          }
+          }
+    setInterval(draw,35);
+  </script>
+      
 </body>
 </html>
