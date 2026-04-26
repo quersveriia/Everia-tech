@@ -1256,7 +1256,7 @@
   }
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
-  const chars = '01ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&';
+  const chars='01ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&';
   const arr = chars.split('');
   const fontSize = 14;
   let drops = Array.from({ length: Math.floor(canvas.width / fontSize) }, () => Math.random() * (canvas.height / fontSize));
@@ -1268,7 +1268,9 @@
     for (let i = 0; i < drops.length; i++) {
       const text = arr[Math.floor(Math.random() * arr.length)];
       ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975){
+       drops[i] = 0;
+      }
       drops[i]++;
     }
   }
