@@ -264,13 +264,24 @@ nav a:hover::after{width:100%;}
 }
 .service-item.open .service-body{max-height:700px;}
 
-.service-body-inner{
+  .service-body-inner{
   border-top:1px solid rgba(212,175,55,0.12);
   margin:0 28px;padding:28px 0;
   display:grid;
-  grid-template-columns:250px 1fr 1fr;
-  gap:28px;align-items:start;
+  grid-template-columns:220px 1fr 1fr;
+  gap:32px;align-items:start;
+  }
+
+@media(max-width:1024px){
+  .service-body-inner{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .service-img-wrap{
+    max-width:300px;margin:0 auto;
+  }
 }
+
 
 /* SERVICE IMAGE WITH TECH OVERLAY */
 .service-img-wrap{
